@@ -21,7 +21,7 @@
       <!-- <label for="nameField">Your Message</label> -->
       <div>
         <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" placeholder="Your Message" type="text">
-        <button (click)="sendMessage()">Send</button>
+        <button [disabled]="this.formValue === ''" (click)="sendMessage()">Send</button>
       </div>
     </div>
   </div>

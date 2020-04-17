@@ -3,8 +3,13 @@
 }
 
 .main-chat-page  {
-  height: 100vh;
   background-image: url("../../../assets/images/chatBG.jpg");
+  background-image: url("https://i.picsum.photos/id/260/1500/2250.jpg/?blur");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   background-color: #e4e4e4;
   margin: -1rem;
 }

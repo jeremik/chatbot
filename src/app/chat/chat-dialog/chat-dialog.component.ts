@@ -13,12 +13,13 @@ export class ChatDialogComponent implements OnInit, AfterViewChecked {
   @ViewChild('scrollMe', { static: false }) private myScrollContainer: ElementRef;
   messages: Observable<Message[]>;
   typing: any;
-  formValue: string;
+  formValue = '';
 
   constructor(private chat: ChatService) { }
 
   ngOnInit() {
     // this.chat.talk();
+    console.log('this.formValue1', this.formValue);
     this.messages = this.chat.conversation.asObservable().pipe(scan((acc, val) => acc.concat(val)));
     this.chat.typing.asObservable().pipe(distinctUntilChanged()).subscribe(res => {
       this.typing = res;
