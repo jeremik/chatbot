@@ -5,12 +5,17 @@
 .main-chat-page  {
   height: 100vh;
   background-image: url("../../../assets/images/chatBG.jpg");
+  background-color: #e4e4e4;
   margin: -1rem;
 }
 
 .chat-space{
-  width: 30%;
+  width: 40%;
   margin: auto;
+
+  @media(max-width:800px){
+    width: 60%;
+  }
 
   h1{
     color: #646464;
@@ -31,7 +36,7 @@
 .to {
   padding-bottom: .9rem;
   text-align: right;
-  border-bottom: .5px solid rgb(204, 204, 204, 0.7);
+  border-bottom: .5px solid rgba(204, 204, 204, 0.7);
   span{
   // background-color: #007eff;
   font-size: 1.3rem;
@@ -46,7 +51,7 @@
 .from{
   padding-bottom: .9rem;
   text-align: left;
-  border-bottom: .5px solid rgb(204, 204, 204, 0.7);
+  border-bottom: .5px solid rgba(204, 204, 204, 0.7);
   span{
     // background-color: hsla(230,8%,60%,1);
     font-size: 1.3rem;
