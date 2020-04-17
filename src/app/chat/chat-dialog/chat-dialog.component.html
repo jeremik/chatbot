@@ -1,0 +1,28 @@
+<div class="main-chat-page">
+  <div class="chat-space">
+    <h1>Nyx Justincase Chatbot</h1>
+    <div #scrollMe class="chitchat">
+      <div *ngFor="let message of messages | async">
+        <div class="message" [ngClass]="{'from': message.sentBy === 'bot','to': message.sentBy === 'user'}">
+          <span>{{message.content}}</span>
+        </div>
+      </div>
+      <!-- <h2>{{typing}}</h2> -->
+      <div *ngIf="typing" class="bubble-chat">
+        <div class="container-circle">
+          <div class="circle cc1" id="circle1"></div>
+          <div class="circle cc2" id="circle2"></div>
+          <div class="circle cc3" id="circle3"></div>
+          <!-- <div class="circle cc3" id="circle3">typing</div> -->
+        </div>
+      </div>
+    </div>
+    <div class="compose-msg">
+      <!-- <label for="nameField">Your Message</label> -->
+      <div>
+        <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" placeholder="Your Message" type="text">
+        <button (click)="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+</div>

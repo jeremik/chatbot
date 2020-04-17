@@ -3,8 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  dialogFlow: { nyxBot: 'c8fae06e265241cfa95a8848e59c4dee' }
 };
+
+
 
 /*
  * For easier debugging in development mode, you can import the following file
